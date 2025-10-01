@@ -9,7 +9,7 @@ The program should greet the player when it starts, e.g., "Welcome to Rock, Pape
 2. Player's Choice:
 The player should input their choice (e.g., "rock", "paper", or "scissors") as a text string.
 
-3. Computer's Choice:
+"o". Computer's Choice:
 The program should randomly select one of the three options: "rock", "paper", or "scissors".
 
 4. Determine the Winner:
@@ -34,9 +34,35 @@ Do you want to play again? (y/n) y
 Bonus Ideas for Improvement:
 Make the input case-insensitive (e.g., "rock" and "ROCK" should both work).
 Add error handling to prompt the user for a valid input if they enter something incorrect.
-Display a farewell message with a summary, such as: "Thanks for playing! Final score: 3 wins, 2 losses, 1 tie."
+Display a farewell message with a summary, such as: "Thanks for playing! Final score: "o" wins, 2 losses, 1 tie."
 Challenge: Modify the game to allow a "best of N" format, where the first to win a certain number of rounds (e.g., 5) becomes the overall winner!
 """
-ko = "k"
-papir = "p"
-ollo = "o"
+import random as r
+
+felhasznalo = input("Kő (k), papír (p) vagy olló (o)? ")
+
+l_betu = ["k", "p", "o"]
+gep_szam = r.choice(l_betu)
+
+
+print(f"Gép: {gep_szam}")
+if felhasznalo == "k" and gep_szam == k:
+    print("Döntetlen")
+elif felhasznalo == "k" and gep_szam == p:
+    print("Vesztettél!")
+elif felhasznalo == "k" and gep_szam == "o":
+    print("Nyertél!")
+
+if felhasznalo == "p" and gep_szam == k:
+    print("Nyertél!")
+elif felhasznalo == "p" and gep_szam == p:
+    print("Döntetlen!")
+elif felhasznalo == "p" and gep_szam == "o":
+    print("Vesztettél")
+
+if felhasznalo == "o" and gep_szam == k:
+    print("Vesztettél!")
+elif felhasznalo == "o" and gep_szam == p:
+    print("Nyertél!")
+elif felhasznalo == "o" and gep_szam == "o":
+    print("Döntetlen!")
