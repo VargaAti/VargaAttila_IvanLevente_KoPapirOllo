@@ -50,10 +50,9 @@ while folytatja:
 
     #Kívánja-e folytatni a felhasználó
     felhasznalo_folytatja = input("Folytatod a játékot? i/n ")
-    if felhasznalo_folytatja == "n":
-        break
-    elif felhasznalo_folytatja == "i":
-        folytatja = True
-    else:
-        print("Helytelen formátum! i/n")
+    if felhasznalo != "i" and felhasznalo != "n":
+        print("Helytelen formátum! i/n A JÁTÉK ÚJRAKEZDŐDIK!")
+        continue
+    elif felhasznalo_folytatja == "n":
+        folytatja = False
         break
