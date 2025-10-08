@@ -55,4 +55,5 @@ while folytatja:
     elif felhasznalo_folytatja == "i":
         folytatja = True
     else:
+        print("Helytelen formátum! i/n")
         break
